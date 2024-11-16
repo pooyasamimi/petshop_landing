@@ -5,10 +5,10 @@ const $ = document,
     logo = $.querySelector(".logo"),
     overlay = $.querySelector('.overlay')
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      alert("مثلا استاد قرار بود با گوشی نبینی");
-    }
+// const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// if (isMobile) {
+//     alert("با فلان دیوایس نبین");
+// }
 
 navIcon.addEventListener("click", () => {
     navMenu.style.top = "0";
@@ -35,19 +35,19 @@ navIconClose.addEventListener("click", hideMenu);
 overlay.addEventListener('click', hideMenu)
 
 const swiper = new Swiper(".mySwiper", {
-        effect: "fade",
-        speed: 1e3,
-        autoplay: {
-            delay: 5e3
-        },
-        breakpoints: {
-            640: {
-                pagination: {
-                    el: ".swiper-pagination"
-                }
+    effect: "fade",
+    speed: 1e3,
+    autoplay: {
+        delay: 5e3
+    },
+    breakpoints: {
+        640: {
+            pagination: {
+                el: ".swiper-pagination"
             }
         }
-    }),
+    }
+}),
     swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 1,
         spaceBetween: 10,
